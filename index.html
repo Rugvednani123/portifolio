@@ -268,6 +268,7 @@
   .project-card__bar--indigo{ background:linear-gradient(90deg, var(--indigo), var(--violet)); }
   .project-card__bar--teal{ background:linear-gradient(90deg, var(--teal), #34D399); }
   .project-card__bar--coral{ background:linear-gradient(90deg, var(--coral), var(--pink)); }
+  .project-card__bar--violet{ background:linear-gradient(90deg, var(--violet), var(--indigo)); }
   .project-card__body{ padding:22px; flex:1; display:flex; flex-direction:column; }
   .project-card__title{ font-family:var(--font-display); font-weight:700; font-size:17px; margin:0 0 10px; }
   .project-card__desc{ color:var(--ink-dim); font-size:14px; margin:0 0 16px; flex:1; }
@@ -278,6 +279,7 @@
   .project-card__link--indigo{ color:var(--indigo); }
   .project-card__link--teal{ color:var(--teal); }
   .project-card__link--coral{ color:var(--coral); }
+  .project-card__link--violet{ color:var(--violet); }
 
   /* ---------------- CERTIFICATES ---------------- */
   .cert-list{ display:flex; flex-direction:column; gap:12px; }
@@ -285,13 +287,18 @@
     display:flex; align-items:center; gap:16px;
     background:#fff; border:1px solid var(--border); border-radius:var(--radius-md);
     padding:16px 20px; box-shadow:var(--shadow-card);
+    text-decoration:none; color:inherit;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
   }
+  .cert-row:hover{ transform:translateY(-2px); box-shadow:var(--shadow-hover); border-color:var(--indigo); }
   .cert-row__badge{
     width:40px; height:40px; border-radius:10px; flex-shrink:0;
     display:flex; align-items:center; justify-content:center; font-size:17px; color:#fff;
   }
+  .cert-row__text{ flex:1; }
   .cert-row__text b{ display:block; font-size:14.5px; }
   .cert-row__text span{ color:var(--ink-dim); font-size:13px; }
+  .cert-row__link{ font-size:12.5px; font-weight:700; color:var(--indigo); white-space:nowrap; }
 
   /* ---------------- BLOG ---------------- */
   .blog-card{
@@ -422,7 +429,7 @@
             <div class="timeline-item__title">B.Tech, Computer Science &amp; Data Science</div>
             <div class="timeline-item__org">Guru Nanak Institution of Technical Campus · Hyderabad, India</div>
           </div>
-          <div class="timeline-item__meta">2022 – Present<br>GPA 8.0 / 10</div>
+          <div class="timeline-item__meta">2022 – 2026<br>GPA 8.0 / 10</div>
         </div>
       </div>
       <div class="timeline-item timeline-item--teal">
@@ -479,7 +486,7 @@
       <div class="skill-card skill-card--violet">
         <div class="skill-card__title">Databases</div>
         <div class="skill-card__tags">
-          <span class="pill" style="background:var(--violet-soft); color:var(--violet);">MySQL</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">MongoDB</span>
+          <span class="pill" style="background:var(--violet-soft); color:var(--violet);">MySQL</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">MongoDB</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">PostgreSQL</span>
         </div>
       </div>
       <div class="skill-card skill-card--amber">
@@ -491,7 +498,7 @@
       <div class="skill-card skill-card--pink">
         <div class="skill-card__title">Tools</div>
         <div class="skill-card__tags">
-          <span class="pill" style="background:var(--pink-soft); color:var(--pink);">Git</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">GitHub</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">Jupyter</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">RStudio</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">MySQL Workbench</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">MongoDB Compass</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">VS Code</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">Power BI</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">Selenium</span>
+          <span class="pill" style="background:var(--pink-soft); color:var(--pink);">Git</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">GitHub</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">Jupyter</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">RStudio</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">MySQL Workbench</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">MongoDB Compass</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">VS Code</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">Power BI</span><span class="pill" style="background:var(--pink-soft); color:var(--pink);">N8N Automation</span>
         </div>
       </div>
     </div>
@@ -558,6 +565,17 @@
         </div>
       </div>
       <div class="project-card">
+        <div class="project-card__bar project-card__bar--violet"></div>
+        <div class="project-card__body">
+          <div class="project-card__title">TrackFlow</div>
+          <p class="project-card__desc">A full-stack productivity web app built with Flask, MongoDB and Cloudinary to help students track study, fitness, reading and learning activity — customizable timetables, topic-wise progress, daily logs, RESTful APIs and GitHub-style contribution tracking, deployed on Render.</p>
+          <div class="project-card__tags">
+            <span class="pill" style="background:var(--violet-soft); color:var(--violet);">Flask</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">MongoDB</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">Cloudinary</span><span class="pill" style="background:var(--violet-soft); color:var(--violet);">Render</span>
+          </div>
+          <a class="project-card__link project-card__link--violet" href="https://timetble.onrender.com/" target="_blank" rel="noopener">StudyTracker — Topic-Wise Learning System →</a>
+        </div>
+      </div>
+      <div class="project-card">
         <div class="project-card__bar project-card__bar--indigo"></div>
         <div class="project-card__body">
           <div class="project-card__title">Personal Portfolio Website</div>
@@ -579,18 +597,21 @@
       <h2 class="section__title">Courses &amp; certifications</h2>
     </div>
     <div class="cert-list">
-      <div class="cert-row">
+      <a class="cert-row" href="https://drive.google.com/file/d/1EH-mda-iZIr1OX94HN2rA6MimWzQANss/view" target="_blank" rel="noopener">
         <div class="cert-row__badge" style="background:var(--indigo);">🎓</div>
         <div class="cert-row__text"><b>NPTEL — The Joy of Computing Using Python</b><span>IIT Madras</span></div>
-      </div>
-      <div class="cert-row">
+        <span class="cert-row__link">View certificate →</span>
+      </a>
+      <a class="cert-row" href="https://drive.google.com/file/d/1aTty3jxuyYvlkhANxb-q9DvHk9tsdL3u/view?usp=drive_link" target="_blank" rel="noopener">
         <div class="cert-row__badge" style="background:var(--teal);">📊</div>
         <div class="cert-row__text"><b>Data Analytics with Power BI Internship</b><span>InternSpot Innovation (MSME &amp; AICTE Certified)</span></div>
-      </div>
-      <div class="cert-row">
+        <span class="cert-row__link">View certificate →</span>
+      </a>
+      <a class="cert-row" href="https://drive.google.com/file/d/1tOtJRg-87p3PzPdR13N4bGQ1k7pppwmw/view?usp=drivesdk" target="_blank" rel="noopener">
         <div class="cert-row__badge" style="background:var(--coral);">🧪</div>
         <div class="cert-row__text"><b>Deloitte Data Analytics Job Simulation</b><span>Forage</span></div>
-      </div>
+        <span class="cert-row__link">View certificate →</span>
+      </a>
     </div>
   </div>
 </section>
