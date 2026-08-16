@@ -1,2 +1,2 @@
 # portifolio
-my first ml project
+my personal portifolio
